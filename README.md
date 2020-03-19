@@ -13,6 +13,8 @@ docker build -t lukasheinrich/folding:simple . -f simple/Dockerfile
 
 ## Usage
 
+Run via:
+
 ```
 docker run lukasheinrich/folding:simple
 ```
