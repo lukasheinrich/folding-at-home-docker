@@ -1,0 +1,21 @@
+name: CI/CD
+
+on:
+  push:
+  schedule:
+  - cron:  '1 0 * * *'
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+    - name: Build Docker image
+      run: |
+        docker build . \
+          --file simple/Dockerfile \
+          --tag lukasheinrich/folding:$GITHUB_SHA \
+          --compress
+        docker images
