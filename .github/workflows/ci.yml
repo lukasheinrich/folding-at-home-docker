@@ -15,7 +15,7 @@ jobs:
     - name: Build Docker image
       run: |
         docker build . \
-          --file simple/Dockerfile \
+          --file Dockerfile \
           --tag lukasheinrich/folding:$GITHUB_SHA \
           --compress
         docker images

@@ -21,8 +21,8 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: lukasheinrich/folding
-        dockerfile: simple/Dockerfile
-        tags: latest,simple
+        dockerfile: Dockerfile
+        tags: latest
     - name: Build and Publish to Registry with Release Tag
       if: ${{ startsWith(github.ref, 'refs/tags/') }}
       uses: docker/build-push-action@v1
@@ -30,6 +30,6 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: lukasheinrich/folding
-        dockerfile: simple/Dockerfile
-        tags: latest,latest-stable,simple
+        dockerfile: Dockerfile
+        tags: latest,latest-stable
         tag_with_ref: true
