@@ -1,20 +1,18 @@
 # Folding@home Docker images
 
-Docker images for [Folding@home](https://foldingathome.org/)
+Docker images for [Folding@home](https://foldingathome.org/) with GPU support
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/lukasheinrich/folding)](https://hub.docker.com/r/lukasheinrich/folding)
-[![Docker Image Size (tag)](https://img.shields.io/docker/image-size/lukasheinrich/folding/simple)](https://hub.docker.com/r/lukasheinrich/folding/tags?name=simple)
+[![Docker Image Size (tag)](https://img.shields.io/docker/image-size/lukasheinrich/folding/simple)](https://hub.docker.com/r/lukasheinrich/folding/tags?name=latest)
 
 ## Build image
 
 ```
-docker build -t lukasheinrich/folding:simple . -f simple/Dockerfile
+docker build -t lukasheinrich/folding:latest . -f Dockerfile
 ```
 
 ## Usage
 
-Run via:
-
 ```
-docker run lukasheinrich/folding:simple
+docker run lukasheinrich/folding:latest
 ```
