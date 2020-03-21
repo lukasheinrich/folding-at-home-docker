@@ -14,5 +14,5 @@ docker build -t lukasheinrich/folding:latest . -f Dockerfile
 ## Usage
 
 ```
-docker run lukasheinrich/folding:latest
+docker run --rm lukasheinrich/folding:latest
 ```
