@@ -15,4 +15,5 @@ docker build -t lukasheinrich/folding:latest . -f Dockerfile
 
 ```
 docker run --rm lukasheinrich/folding:latest
+singularity run --nv docker://lukasheinrich/folding:latest FAHClient --user=CERN --team=38188 --gpu=true --smp=true
 ```
