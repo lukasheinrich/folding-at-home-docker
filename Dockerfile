@@ -3,7 +3,7 @@ FROM nvidia/opencl:runtime-ubuntu18.04
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && \
-  apt-get install -y --no-install-recommends ocl-icd-opencl-dev && \
+  apt-get install -y --no-install-recommends libnvidia-compute-430 ocl-icd-opencl-dev && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
 
