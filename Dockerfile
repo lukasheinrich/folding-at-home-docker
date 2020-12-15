@@ -14,4 +14,4 @@ RUN dpkg -i /tmp/fahclient_7.6.9_amd64.deb || exit 0 && \
 WORKDIR /root
 VOLUME /root
 
-CMD ["FAHClient", "--user=CERN", "--team=38188", "--gpu=true", "--smp=true"]
+CMD ["FAHClient", "--user=CERN", "--team=38188", "--gpu=true", "--smp=true", "--max-units=1", "--exit-when-done"]
